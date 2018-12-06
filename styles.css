@@ -1,0 +1,17 @@
+h1 {
+	color: purple;
+	font-family: verdana;
+	font-size: 300%;
+}
+h1 {
+	border: 3px solid brown;
+	padding: 30px;
+}
+
+.button {
+	background-color: #FEA7FE;
+}
+
+.button:hover {
+	background-color: green;
+}
