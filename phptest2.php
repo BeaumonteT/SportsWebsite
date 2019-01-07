@@ -6,7 +6,7 @@
 		$option = isset($_POST['myTest']) ? $_POST['myTest'] : false;
 		if ($option){
 			$testField = $_POST['myTest'];
-			$query = 	select ". $testField . " fromusers;";
+			$query ="	select ". $testField . " fromusers;";
 			$result = mysqli_query($conn, $query);
 			while ($row = mysqli_fetch_assoc($result)) {
 				echo $row[$testfield] . "<br>";
