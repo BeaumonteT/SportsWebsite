@@ -1,17 +1,12 @@
 <?php
-		include_once 'formtest.html';
+		include_once 'Sports.html';
 		require_once 'login.php';
-		$conn = mysqli_connect($host, $user, $pass, $db, $port);
-		if($conn->connect_error) die($conn->connect_error);
-		$option = isset($_POST['myTest']) ? $_POST['myTest'] : false;
-		if ($option){
-			$testField = $_POST['myTest'];
-			$query ="	select ". $testField . " from users;";
-			$result = mysqli_query($conn, $query);
-			while ($row = mysqli_fetch_assoc($result)) {
-				echo $row[$testfield] . "<br>";
-			}
-		}
-		$result->close();
-		$conn->close();
+		echo $_Post['myTest'];
+		$query = "SELECT * FROM athletics";
+		$result = mysqli_query($connection, $query);
+		echo "<table><tr><th>Sport</th><th>Season</th><th>Location</th></tr>";
+		while ($row = mysqli_fetch_assoc($result)) {
+			echo "<tr><td>".$row["Sport"]."</td><td>".$row["Season"]."</td><td>".$row["Location"]"</td></tr>";
+	}
+echo "</table>"
 ?>
