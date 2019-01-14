@@ -2,7 +2,7 @@
 		include_once 'Sports.html';
 		require_once 'login.php';
 		echo $_Post['myTest'];
-		$query = "SELECT athletics FROM sports";
+		$query = "SELECT * FROM sports";
 		$result = mysqli_query($connection, $query);
 		echo "<table><tr><th>Sport</th><th>Season</th><th>Location</th></tr>";
 		while ($row = mysqli_fetch_assoc($result)) {
