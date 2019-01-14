@@ -5,7 +5,7 @@
 		$query = "SELECT athletics FROM sports";
 		$result = mysqli_query($connection, $query);
 		echo "<table><tr><th>Sport</th><th>Season</th><th>Location</th></tr>";
-		while ($row = mysqli_fetch_assoc($result)); {
+		while ($row = mysqli_fetch_assoc($result)) {
 			echo "<tr><td>".$row["Sport"]."</td><td>".$row["Season"]."</td><td>".$row["Location"]."</td></tr>";
 	}
 echo "</table>"
